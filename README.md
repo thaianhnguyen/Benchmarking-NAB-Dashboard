@@ -50,7 +50,7 @@ Thư viện sử dụng:</br>
 <a name="Visualization"/> </br>
 ## Visualization:
 
-
+đã khiến $\color{rgb(31,119,180)}{\textsf{tăng 20%}}$	
 
 <a name="Overview-page"/> </br>
 ### Overview page:
