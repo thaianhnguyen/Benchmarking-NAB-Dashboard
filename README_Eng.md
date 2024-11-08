@@ -13,11 +13,9 @@ Table of contents
    * [Details](#details)
        * [Market position](#market-position)
        * [Profitability](#profitability)
-       * [Asset quality](#asset)
-<!--te-->
+       * [Asset quality](#asset)<!--te-->
 <a name="Business-scenario-dataset"/> </br>
 ## Business scenario and dataset
----
 
 In this project, I conducted a data analysis on financial statement data from the banking sector over the past five years to see if how a bank is performing compared to the sector, then to draw some useful insights about its strengths, weaknesses as well as its growth opportunity and threat in the future.
 
@@ -40,40 +38,43 @@ The python script can be found here: [Python Script]()
 
 <a name="Visualization"/> </br>
 ## Visualization:
-
-đã khiến $\color{rgb(31,119,180)}{\textsf{tăng 20%}}$	
-
 <a name="insights"/> </br>
 ### Insights:
 ![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/Slide_eng.JPG)</br>
-
 <a name="details"/> </br>
 ### Details
-![alt text](https://github.com/thaianhnguyen/Sales-Report-for-E-commerce-Company/blob/main/images%20BI/Screenshot_3.jpg)</br>
-For this page, I hope that the users can gain insights about sales for a specific region or for a specific product category, or both. That is why I created two 2 simultaneous slicers and also edit the interaction between certain visuals to be "Filter". For example, the user want to now the sales and top 10 product categories sold in Bahia:</br>
-![alt text](https://github.com/thaianhnguyen/Sales-Report-for-E-commerce-Company/blob/main/images%20BI/Screenshot_4.jpg)</br>
-Or how much Art-labeled products was selling in Rio de Janeiro:</br>
-![alt text](https://github.com/thaianhnguyen/Sales-Report-for-E-commerce-Company/blob/main/images%20BI/Screenshot_5.jpg)</br>
-Lastly, I address the sales manager's requirement regarding customer insight in the third page:
-
 <a name="market-position"/> </br>
 ### Market positions:
-- Although the average revenue and profit over the past 5 years are in the lower range compared to other banks in the medium asset size group (from 100K to 500K billion), NAB's asset growth rate as well as revenue/profit growth are higher than industry and medium banks group average.
-- NAB has seen market share increases in asset, deposit and credit, however there has been no growth, or even slight shrinking in market share in the past two years. </br>
+- In 2023, NAB’s revenue and profits are still in the lower range within the group of banks with medium-sized assets (100K billion VND to 500K billion VND). However, the growth rates of both asset size and revenue/profit are at or higher than the industry average.
+![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/mkt_position_1.jpg)</br>
 
-![alt text]()</br>
+- NAB's market share in deposits and assets has grown since 2018. However, in the last 3 years, market share growth has stagnated or even turned negative → This could limit NAB's growth potential in its credit activities.
+![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/mkt_2.jpg)</br>
+
+
+- For NAB’s deposit composition, the CASA ratio is very low compared to the industry average. → This indicates that NAB’s cost of capital is higher than the industry, which reduces the bank’s profit margin. </br>
+![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/mk_position_3.jpg)</br>
 
 <a name="profitability"/> </br>
 ### Profitability:
+- NAB’s profitability is modest compared to the industry average, but has gradually improved over years and approached the industry average in 2023.
+    - One reason for this improvement can be attributed to effective cost control over the past years.
+</br>
 
--dasj </br>
-![alt text]()</br>
+![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/profit_1.jpg)</br>
 
 <a name="asset"/> </br>
 ### Asset quality:
+- NAB’s asset quality is good, as the Capital Adequacy Ratio (CAR) and Loan-to-Deposit Ratio (LDR) are both within the safe limits set by the State Bank of Vietnam, and NAB's non-performing (NPL) ratio is lower than the industry average.
+- However, the LDR is at the regulatory maximum of 85% → NAB has to increase its deposit in order to expand its loan portfolio while maintaining good liquidity.
+</br>
 
--dasj </br>
-![alt text]()</br>
+![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/asset_1.jpg)</br>
+
+- A low Provision Coverage Ratio (PCR) suggests that NAB is provisioning less for loan losses compared to its current NPL . NAB is trading off credit risk for short-term gains in profitability. If the current NPL is not effectively controlled and loans are to default in the future, NAB’s profitability could be heavily impacted.
+</br>
+
+![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/asset_2.jpg)</br>
 
 
 
