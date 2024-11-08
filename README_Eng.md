@@ -22,7 +22,6 @@ In this project, I conducted a data analysis on financial statement data from th
 The benchmarked bank is randomly selected: Nam Á Bank - NAB.
 
 Data used is the financial statements of all commercial banks over the period of 2018-2023, acquired through the platform [FiinPro](https://fiinpro.com/fiinpro-x)
-
 <a name="Data-cleaning"/> </br>
 ## Data cleaning  
 
@@ -37,34 +36,28 @@ The library used:</br>
 The python script can be found here: [Python Script]()
 
 <a name="Visualization"/> </br>
-## Visualization:
-<a name="insights"/> </br>
+## Visualization: </br> <a name="insights"/> </br>
 ### Insights:
-![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/Slide_eng.JPG)</br>
-<a name="details"/> </br>
-### Details
-<a name="market-position"/> </br>
-### Market positions:
+![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/Slide_eng.JPG) </br>
+### Details: <a name="details"/> </br>
+### Market positions: <a name="market-position"/> </br>
 - In 2023, NAB’s revenue and profits are still in the lower range within the group of banks with medium-sized assets (100K billion VND to 500K billion VND). However, the growth rates of both asset size and revenue/profit are at or higher than the industry average.
 ![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/mkt_position_1.jpg)</br>
 
 - NAB's market share in deposits and assets has grown since 2018. However, in the last 3 years, market share growth has stagnated or even turned negative → This could limit NAB's growth potential in its credit activities.
 ![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/mkt_2.jpg)</br>
 
-
 - For NAB’s deposit composition, the CASA ratio is very low compared to the industry average. → This indicates that NAB’s cost of capital is higher than the industry, which reduces the bank’s profit margin. </br>
 ![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/mk_position_3.jpg)</br>
 
-<a name="profitability"/> </br>
-### Profitability:
+### Profitability: <a name="profitability"/> </br>
 - NAB’s profitability is modest compared to the industry average, but has gradually improved over years and approached the industry average in 2023.
     - One reason for this improvement can be attributed to effective cost control over the past years.
 </br>
 
 ![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/profit_1.jpg)</br>
 
-<a name="asset"/> </br>
-### Asset quality:
+### Asset quality: <a name="asset"/> </br>
 - NAB’s asset quality is good, as the Capital Adequacy Ratio (CAR) and Loan-to-Deposit Ratio (LDR) are both within the safe limits set by the State Bank of Vietnam, and NAB's non-performing (NPL) ratio is lower than the industry average.
 - However, the LDR is at the regulatory maximum of 85% → NAB has to increase its deposit in order to expand its loan portfolio while maintaining good liquidity.
 </br>
