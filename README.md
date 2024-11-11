@@ -1,98 +1,69 @@
 # So sánh 1 ngân hàng với ngành (Benchmarking)
-The report has been published on Power BI service at here: [**_SALE REPORT_**](https://app.powerbi.com/view?r=eyJrIjoiNDhmZWUxNzAtZTljNi00MDVhLWFmZTYtMTc4MTgzMDNhNTY3IiwidCI6ImFmMWYzNzUzLTM5MjUtNGU2Zi05NDliLTk3YzAwNzMyMDgwMyIsImMiOjEwfQ%3D%3D&fbclid=IwAR19SyBorqdDhtuXZaKvqBwRLDbzsqN-1SsMNP7veJgnAn43vM0rNTJC4YQ)
+Xem dashboard trên Power BI tại: [**Dashboard Power BI**](https://app.powerbi.com/view?r=eyJrIjoiNDhmZWUxNzAtZTljNi00MDVhLWFmZTYtMTc4MTgzMDNhNTY3IiwidCI6ImFmMWYzNzUzLTM5MjUtNGU2Zi05NDliLTk3YzAwNzMyMDgwMyIsImMiOjEwfQ%3D%3D&fbclid=IwAR19SyBorqdDhtuXZaKvqBwRLDbzsqN-1SsMNP7veJgnAn43vM0rNTJC4YQ)
 ---
-
+## Version: [**_English_**](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/README_Eng.md)
 Table of contents
 =================
 
 <!--ts-->
-* [Bài toán và Dữ liệu](#Business-scenario-dataset)
+* [Bài toán và dữ liệu](#Business-scenario-dataset)
 * [Làm sạch dữ liệu với Python](#Data-cleaning)
-* [Visualization](#Visualization)
-   * [Overview Page](#overview-page)
-   * [Sales by Product/Region](#Product-region)
-   * [Customer Analysis](#Customer-analysis)
-* [Insights](#Insights)
-<!--te-->
+* [Trực quan_hóa](#Visualization)
+   * [Insights](#insights)
+   * [Chi tiết](#details)
+       * [Vị thế thị trường](#market-position)
+       * [Khả năng sinh lời](#profitability)
+       * [Chất lượng tài sản](#asset)<!--te-->
 <a name="Business-scenario-dataset"/> </br>
 ## Bài toán và dữ liệu
----
+Với dự án này, tôi mong muốn có thể phân tích dữ liệu báo cáo tài chính của ngành ngân hàng trong vòng 5 năm qua để so sánh hiệu suất của một ngân hàng với ngành, từ đó rút ra những thông tin hữu ích về điểm mạnh, điểm yếu, cũng như cơ hội tăng trưởng và thách thức trong tương lai.
 
-Tôi muốn thực hiện 1 báo cáo có thể so sánh hiệu quả hoạt động của một ngân hàng bất kì với các ngân hàng trong ngành, từ đó có thể thấy được điểm mạnh, điểm yếu và cơ hội của ngân hàng đó.
-I want to know how well a bank is doing compared to the industry, ....
+Ngân hàng benchmarked được chọn ngẫu nhiên: Ngân hàng Nam Á - NAB.
 
-Ngân hàng so sánh được lựa chọn bất kì: Ngân hàng Nam Á Bank- NAB
-The benchmarked bank is randomly selected: Nam Á Bank - NAB.
-
-Data used is the financial statements of all commercial banks over the period of 2018-2023, acquired through the platform [FiinPro](https://fiinpro.com/fiinpro-x)
-
+Dữ liệu báo cáo tài chính của các ngân hàng thương mại trong giai đoạn 2018-2023 được thu thập thông qua nền tảng [FiinPro](https://fiinpro.com/fiinpro-x)
 <a name="Data-cleaning"/> </br>
 ## Data cleaning  
 
-The data is in form of excels file and structured in conventionally financial wide format - panel data. 
-
-Dữ liệu ở dưới dạng file excel, theo format tài chính truyền thống - dữ liệu dạng bảng. 
-Tôi sử dụng các thư viện os, openpyxl để có thể truy cập các file excel và import thành dataframe. Sau đó sử dụng panda để chỉnh sửa cấu trúc dữ liệu, làm sạch dữ liệu
-Khó khăn:
-- Dữ liệu ở dạng bảng, các cột là các chỉ tiêu tài chính trải theo chiều thời gian (năm, quý). </br>
-
-
-The library used:</br>
-- os, openpyxl: to access folder directory and excel files
-- panda, re: to convert data into long-format structure for analysis purposes and clean data . </br>
-- numpy, seaborn: perform mathematic data transformations and EDA </br>
+Dữ liệu ở dưới dạng file excel, theo format tài chính - dữ liệu dạng bảng. 
+![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/image/data.jpg)</br>
 
 Thư viện sử dụng:</br>
 - os, openpyxl: truy cập đường dẫn folder và file excels. </br>
 - panda, re: biến đổi cấu trúc dữ liệu thành long-format phù hợp với phân tích; làm sạch tên cột, dữ liệu. </br>
 - numpy, seaborn: biến đổi số học dữ liệu và tạo chart để khai phá dữ liệu tại một số cột </br>
 
+Xem thêm về quá trình xử lý bằng Python tại: [Python Script](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/clean%20bank%20data.ipynb)
+
 <a name="Visualization"/> </br>
-## Visualization:
+## Trực quan hóa dữ liệu: </br> <a name="insights"/> </br>
+### Insights:
+![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/image/Slide_Vie.JPG) </br>
+### Chi tiết: <a name="details"/> </br>
+### Vị thế thị trường: <a name="market-position"/> </br>
+- Theo số liệu năm 2023, doanh thu, lợi nhuận NAB còn nằm ở nhóm thấp trong nhóm ngân hàng có quy mô tài sản trung bình (từ 100k tỷ đến 500k tỷ). Tuy vậy, tỉ lệ tăng trưởng quy mô tài sản lẫn doanh thu/ lợi nhuận đều chạm hoặc cao hơn mức TB ngành/nhóm NH cùng quy mô.
+![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/image/mkt_position_1.jpg)</br>
 
-đã khiến $\color{rgb(31,119,180)}{\textsf{tăng 20%}}$	
+- Thị phần về huy động và tài sản của NAB cũng đã tăng trưởng đáng kể so với giai đoạn năm 2018. Tuy nhiên, 3 năm gần đây thị phần có chững lại hay thậm chí tăng trưởng âm → Điều này có thể hạn chế tiềm năng tăng trưởng của NAB về hoạt động tín dụng
+![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/image/mkt_2.jpg)</br>
 
-<a name="Overview-page"/> </br>
-### Overview page:
-![alt text](https://github.com/thaianhnguyen/Sales-Report-for-E-commerce-Company/blob/main/images%20BI/Screenshot_2.jpg)</br>
-The page provides the user with a big picture of sales performance via some important KPIs over the last year. Generally speaking, it seemed the company saw great growth compared to the previous year (except for the last quarter, September specifically). 
-However, it lacked insightful information in terms of regional and product-wise sales. That is why I created the second page:
+- Nhìn vào cơ cấu huy động của NAB, tiền gửi không kì hạn (CASA) đang chiếm tỷ lệ rất thấp so với TB ngành. Đây lại là nguồn huy động với lãi suất rất thấp → cho thấy chi phí vốn của NAB cao hơn so với ngành, làm giảm biên lợi nhuận của ngân hàng này. </br>
+![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/image/mk_position_3.jpg)</br>
 
-<a name="Product-region"/> </br>
-### Sales by Product/Sale
-![alt text](https://github.com/thaianhnguyen/Sales-Report-for-E-commerce-Company/blob/main/images%20BI/Screenshot_3.jpg)</br>
-For this page, I hope that the users can gain insights about sales for a specific region or for a specific product category, or both. That is why I created two 2 simultaneous slicers and also edit the interaction between certain visuals to be "Filter". For example, the user want to now the sales and top 10 product categories sold in Bahia:</br>
-![alt text](https://github.com/thaianhnguyen/Sales-Report-for-E-commerce-Company/blob/main/images%20BI/Screenshot_4.jpg)</br>
-Or how much Art-labeled products was selling in Rio de Janeiro:</br>
-![alt text](https://github.com/thaianhnguyen/Sales-Report-for-E-commerce-Company/blob/main/images%20BI/Screenshot_5.jpg)</br>
-Lastly, I address the sales manager's requirement regarding customer insight in the third page:
+### Khả năng sinh lời: <a name="profitability"/> </br>
+- Các chỉ số sinh lời còn khiêm tốn so với TB ngành, tuy nhiên có sự cải thiện dần ở từng năm và đã tiệm cận với TB ngành vào năm 2023.
+    - 1 động lực có thấy được cho việc này chính là từ việc NAB ngày càng kiểm soát chi phí tốt hơn trong những năm qua
+</br>
 
-<a name="Customer-analysis"/> </br>
-### Customer Analysis:
-![alt text](https://github.com/thaianhnguyen/Sales-Report-for-E-commerce-Company/blob/main/images%20BI/Screenshot_8.jpg)</br>
-For this page, I want to show how many customers are returning for a second purchase, how positive their reviews are and how on-time our delivery is. I also included the segmentation of customers based on RFM analysis that I conducted with SQL [**here**](https://github.com/thaianhnguyen/RFM-analysis-with-SQL/blob/main/rfm%20read%20me.md).
+![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/image/profit_1.jpg)</br>
 
-_The highlight of this page, firstly, is the cohort analysis of returning customer_. This gives us insights of how many new customers are returning for the subsequent months. For example, we can see that for January 2018, there are 6838 new customers, only 23 of who return in the February and 25 of who return in March and so on.</br>
-![alt text](https://github.com/thaianhnguyen/Sales-Report-for-E-commerce-Company/blob/main/images%20BI/Screenshot_9.jpg)</br>
+### Chất lượng tài sản: <a name="asset"/> </br>
+- Chất lượng tài sản của NAB đang ở mức tốt khi mà tỷ lệ CAR và LDR đều đang trong ngưỡng an toàn cho phép của NHNN và tỷ lệ nợ xấu của NAB thấp hơn TB ngành.
+- Tuy nhiên, việc LDR ở ngưỡng tối đa cho phép 85% → NAB sẽ cần gia tăng quy mô huy động để có thể gia tăng quy mô tín dụng mà vẫn đảm bảo tỷ lệ thanh khoản
+</br>
 
-_The second highlight is that the manager can decide the period, based on which retention rate are calculated_. For example, retention rate with a period of 6 months would mean a returning customer is one that has made repeated purchase for the last 6 months. 
+![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/image/asset_1.jpg)</br>
 
-The last page is a decompostion tree visual, which should deepen insights about what total sales are made of, across dimensional variables, which are State, Product Category and Date here. </br>
-![alt text](https://github.com/thaianhnguyen/Sales-Report-for-E-commerce-Company/blob/main/images%20BI/Screenshot_7.jpg)</br>
+- Tỷ lệ bao phủ nợ xấu (PCR) thấp cho thấy NAB đang trích lập dự phòng ít hơn so với tổng dư nợ xấu hiện tại, đánh đổi rủi ro tín dụng lấy lợi nhuận trong ngắn hạn. Trong tương lai, nếu như tỷ lệ nợ xấu không được kiểm soát tốt và các khoản nợ xấu hiện tại không được khắc phục, lợi nhuận của NAB sẽ bị ảnh hưởng nghiêm trọng.
+</br>
 
-<a name="Insights"/> </br>
-## Insights
-- Sales this year has seen an great increase in all aspects, compared to last year. This is a good sign.
-- Top selling product categories are beauty products and watches gifts while the top 3 states are Sao Paulo, Rio de Janeiro and Minas Gerais, the first of which triples the other two.
-- However, the retention rate is alarmingly low, compared to the expected ratio of 15-30% in e-commerce industry. And it seems it is not the sellers, but __the logistics__, to be blamed:
-   - The reason might not be the product quality as the CSAT ratio is greater than 75% (even for churn customer segment). 
-   - The on time delivery rate is not good (below 95%).
-   - The average delivery days increases and on time delivery rate decreases for the "likely to churn" and "churn" segment. </br> 
-Therefore, it might be useful conducting further analysis into the correlation between late delivery and retention rate.
-- The "middle" segment is witnessing drastic decreases in sales for the past 6 months. It's worth giving more attention to these customers.
-
-This is the end of my blog. I hope with my report, the sales manager can draw useful insights that are actionable. 
-
-
-
-Thank you for reading my blog.
+![alt text](https://github.com/thaianhnguyen/Benchmarking-NAB-Dashboard/blob/main/image/asset_2.jpg)</br>
